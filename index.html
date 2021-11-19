@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+	<header class="header">
+		<img src="./images/logo_header.svg" alt="Лого" class="header__logo">
+	</header>
+	<main>
+		<section class="popup popup_opened">
+			<div class="popup__container">
+				<img src="./images/close.svg" alt="Закрыть" class="button button_action_close">
+				<form class="popup__admin">
+					<h2 class="popup__title">Редактировать профиль</h2>
+					<div class="popup__form-container">
+						<fieldset class="popup__input-container">
+							<input type="text" class="popup__input-text" value="Жак-Ив Кусто">
+						</fieldset>
+						<fieldset class="popup__input-container">
+							<input type="text" class="popup__input-text" value="Исследователь океана">
+						</fieldset>
+						<fieldset class="popup__handler">
+							<input type="submit" class="popup__button" value="Сохранить">
+						</fieldset>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="profile">
+			<img src="./images/avatar.png" alt="Аватар" class="profile__avatar">
+			<div>
+				<div class="profile__info">
+					<h1 class="profile__name" id="name">Жак-Ив Кусто</h1>
+					<img src="./images/edit.svg" alt="Редактировать" class="button button_action_edit">
+				</div>
+				<p class="profile__description" id="description">Исследователь океана</p>
+			</div>
+			<img src="./images/add.svg" alt="Добавить" class="button button_action_add">
+		</section>
+		<section>
+			<ul class="photo-grid page__list">
+				<li class="card">
+					<img src="./images/photo1.png" alt="Фото" class="card__photo">
+					<div class="card__info">
+						<h2 class="card__title">Карачаевск</h2>
+						<img src="./images/like.svg" alt="Лайк" class="card__like">
+					</div>
+				</li>
+				<li class="card">
+					<img src="./images/photo2.png" alt="Фото" class="card__photo">
+					<div class="card__info">
+						<h2 class="card__title">Гора Эльбрус</h2>
+						<img src="./images/like.svg" alt="Лайк" class="card__like card__like_active">
+					</div>
+				</li>
+				<li class="card">
+					<img src="./images/photo3.png" alt="Фото" class="card__photo">
+					<div class="card__info">
+						<h2 class="card__title">Домбай</h2>
+						<img src="./images/like.svg" alt="Лайк" class="card__like card__like_active">
+					</div>
+				</li>
+				<li class="card">
+					<img src="./images/photo4.png" alt="Фото" class="card__photo">
+					<div class="card__info">
+						<h2 class="card__title">Гора Эльбрус</h2>
+						<img src="./images/like.svg" alt="Лайк" class="card__like card__like_active">
+					</div>
+				</li>
+				<li class="card">
+					<img src="./images/photo5.png" alt="Фото" class="card__photo">
+					<div class="card__info">
+						<h2 class="card__title">Домбай</h2>
+						<img src="./images/like.svg" alt="Лайк" class="card__like card__like_active">
+					</div>
+				</li>
+				<li class="card">
+					<img src="./images/photo6.png" alt="Фото" class="card__photo">
+					<div class="card__info">
+						<h2 class="card__title">Карачаево-Черкесия</h2>
+						<img src="./images/like.svg" alt="Лайк" class="card__like card__like_active">
+					</div>
+				</li>
+			</ul>
+		</section>
+	</main>
+	<footer class="footer">
+		<p class="footer__author">© 2020 Mesto Russia</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+.popup__handler {
+	width: 358px;
+	margin: 48px auto 37px;
+	padding: 0;
+	border: none;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+	.popup__handler {
+		width: 238px;
+		font-size: 14px;
+		line-height: 17px;
+		margin-top: 41px;
+		margin-bottom: 0;
+	}
+}

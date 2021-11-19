@@ -1,0 +1,7 @@
+.card__like {
+	margin-right: 3px;
+}
+
+.card__like:hover {
+	opacity: .6;
+}
