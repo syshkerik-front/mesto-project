@@ -18,6 +18,8 @@
 
 **Ссылка на сайт Git Pages**
 
+https://syshkerik-front.github.io/mesto-project/
+
 **Использованные технологии**
 
 HTML, CSS, адаптивная верстка
