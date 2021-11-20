@@ -1,15 +1,14 @@
 .button_action_close {
 	border: none;
 	width: 32px;
-	position: absolute;
-	top: 0;
-	right: 0;
+	margin-bottom: 8px;
+	padding-left: 435px;
 }
 @media screen and (max-width: 767px) {
 	.button_action_close {
 		position: static;
 		width: 20px;
-		margin-bottom: 16px;
-		align-self: flex-end;
+		margin-bottom: 12px;
+		padding-left: 258px;
 	}
 }

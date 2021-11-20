@@ -1,5 +1,5 @@
 .card__like {
-	margin-right: 3px;
+	transition: opacity .5s;
 }
 
 .card__like:hover {
