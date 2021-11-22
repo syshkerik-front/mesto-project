@@ -1,6 +1,6 @@
 .profile {
 	display: grid;
-	margin: 36.25px 200px 47.25px;
+	margin: 36.25px 200px 49.25px;
 	grid-template-columns: 122px calc(100% - 122px - 150px) 150px;
 }
 
@@ -23,7 +23,7 @@
 
 @media screen and (max-width: 767px) {
 	.profile {
-		margin: 38px auto 34px;
+		margin: 38px auto 35px;
 		max-width: 282px;
 		display: flex;
 		flex-direction: column;

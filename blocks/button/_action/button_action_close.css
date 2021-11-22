@@ -1,14 +1,18 @@
 .button_action_close {
 	border: none;
-	width: 32px;
+	width: 100%;
+	min-height: 32px;
 	margin-bottom: 8px;
-	padding-left: 435px;
+	background-image: url(../../../images/close.svg);
+	background-repeat: no-repeat;
+	background-position: right;
 }
 @media screen and (max-width: 767px) {
 	.button_action_close {
 		position: static;
-		width: 20px;
-		margin-bottom: 12px;
-		padding-left: 258px;
+		width: 100%;
+		margin-bottom: 16px;
+		min-height: 20px;
+		background-size: contain;
 	}
 }

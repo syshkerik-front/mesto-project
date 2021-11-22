@@ -1,15 +1,15 @@
 .popup__admin {
 	border-radius: 10px;
 	background-color: #FFFFFF;
+	box-shadow: 0px 0px 25px 0px #00000026;
 	border-radius: 10px;
 	width: 430px;
+	margin-left: 40px;
 }
 
 @media screen and (max-width: 767px) {
 	.popup__admin {
-		border-radius: 10px;
-		background-color: #FFFFFF;
-		border-radius: 10px;
 		width: 100%;
+		margin-left: 0;
 	}
 }
