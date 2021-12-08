@@ -24,68 +24,59 @@
 		</section>
 		<section class="photo-grid">
 			<ul class="photo-grid__list">
-				<li class="card">
-					<img src="./images/photo1.png" alt="Фото" class="card__photo">
-					<div class="card__info">
-						<h2 class="card__title">Карачаевск</h2>
-						<button type="button" class="card__like card__like_active"></button>
-					</div>
-				</li>
-				<li class="card">
-					<img src="./images/photo2.png" alt="Фото" class="card__photo">
-					<div class="card__info">
-						<h2 class="card__title">Гора Эльбрус</h2>
-						<button type="button" class="card__like card__like_active"></button>
-					</div>
-				</li>
-				<li class="card">
-					<img src="./images/photo3.png" alt="Фото" class="card__photo">
-					<div class="card__info">
-						<h2 class="card__title">Домбай</h2>
-						<button type="button" class="card__like card__like_active"></button>
-					</div>
-				</li>
-				<li class="card">
-					<img src="./images/photo4.png" alt="Фото" class="card__photo">
-					<div class="card__info">
-						<h2 class="card__title">Гора Эльбрус</h2>
-						<button type="button" class="card__like card__like_active"></button>
-					</div>
-				</li>
-				<li class="card">
-					<img src="./images/photo5.png" alt="Фото" class="card__photo">
-					<div class="card__info">
-						<h2 class="card__title">Домбай</h2>
-						<button type="button" class="card__like card__like_active"></button>
-					</div>
-				</li>
-				<li class="card">
-					<img src="./images/photo6.png" alt="Фото" class="card__photo">
-					<div class="card__info">
-						<h2 class="card__title">Карачаево-Черкесия</h2>
-						<button type="button" class="card__like card__like_active"></button>
-					</div>
-				</li>
 			</ul>
 		</section>
 	</main>
 	<footer class="footer">
 		<p class="footer__author">© 2020 Mesto Russia</p>
 	</footer>
-	<div class="popup">
+	<div class="popup" id=editprofile>
 		<div class="popup__container">
 			<button class="button button_action_close" type="button"></button>
 			<form class="popup__admin" name="info">
 				<h2 class="popup__title">Редактировать профиль</h2>
 				<fieldset class="popup__input-container">
-					<input type="text" class="popup__input-text" value="Жак-Ив Кусто" name="name">
-					<input type="text" class="popup__input-text" value="Исследователь океана" name="description">
+					<input type="text" class="popup__input-text" name="name" id="name">
+					<input type="text" class="popup__input-text" name="description" id="description">
 				</fieldset>
 				<fieldset class="popup__handler">
-					<input type="submit" class="popup__button" value="Сохранить">
+					<button type="submit" class="popup__button" value="Сохранить">Сохранить</button>
 				</fieldset>
 			</form>
 		</div>
 	</div>
+	<div class="popup" id=addplace>
+		<div class="popup__container">
+			<button class="button button_action_close" type="button"></button>
+			<form class="popup__admin" name="info">
+				<h2 class="popup__title">Новое место</h2>
+				<fieldset class="popup__input-container">
+					<input type="text" class="popup__input-text" placeholder="Название" name="place" id="place">
+					<input type="text" class="popup__input-text" placeholder="Ссылка на картинку" name="link" id="link">
+				</fieldset>
+				<fieldset class="popup__handler">
+					<button type="submit" class="popup__button" value="Создать">Создать</button>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div class="popup" id=popup-photo>
+		<div class="popup__container-photo">
+			<button class="button button_action_close" type="button"></button>
+			<img src="" alt="Фото" class="popup__image-popup">
+			<p class="popup__caption"></p>
+		</div>
+	</div>
+	<template id="card-template">
+		<li class="card">
+			<button type="button" class="card__delete"></button>
+			<img src="" alt="Фото" class="card__photo">
+			<div class="card__info">
+				<h2 class="card__title"></h2>
+				<button type="button" class="card__like"></button>
+			</div>
+		</li>
+	</template>
+	<script src="./scripts/index.js"></script>
 </body>
 </html>
