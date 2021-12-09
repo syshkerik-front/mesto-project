@@ -21,7 +21,6 @@ const createButton = popupPlace.querySelector(".popup__button");
 const cardsContainer = document.querySelector(".photo-grid__list");
 
 const cardTemplate = document.querySelector("#card-template").content;
-let newCard = cardTemplate.querySelector(".card");
 
 const popupPhoto = document.querySelector("#popup-photo");
 const closeButtonPhoto = popupPhoto.querySelector(".button_action_close");
@@ -79,7 +78,7 @@ function editProfile(evt) {
 }
 
 function createCard (link, name) {
-	newCard = cardTemplate.querySelector(".card").cloneNode(true);
+	let newCard = cardTemplate.querySelector(".card").cloneNode(true);
 
 	const newCardPhoto = newCard.querySelector(".card__photo");
 	newCardPhoto.alt = name;
@@ -92,13 +91,16 @@ function createCard (link, name) {
 
 	const newCardDelete = newCard.querySelector(".card__delete");
 	newCardDelete.addEventListener('click', function(){ deleteCard(newCardDelete); });
+	return newCard;
 }
 
 function addInitialCards() {
-	for (let i = 0; i < initialCards.length; i++) {
-		createCard(initialCards[i].link, initialCards[i].name);
+	let newCard;
+
+	initialCards.forEach(function(card) {
+		newCard = createCard(card.link, card.name);
 		cardsContainer.append(newCard);
-	}
+	})
 }
 
 function toggleLikes(like) {
@@ -108,7 +110,8 @@ function toggleLikes(like) {
 function addCard(evt) {
 	evt.preventDefault();
 
-	createCard(linkInput.value, placeInput.value);
+	let newCard;
+	newCard = createCard(linkInput.value, placeInput.value);
 	cardsContainer.prepend(newCard);
 	linkInput.value = '';
 	placeInput.value = '';
@@ -123,6 +126,7 @@ function deleteCard(item) {
 function resizePhoto(item) {
 	openPopup(popupPhoto);
 	photoLink.src = item.src;
+	photoLink.alt = item.alt;
 	photoCaption.textContent = item.alt;
 }
 
