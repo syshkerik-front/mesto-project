@@ -78,7 +78,7 @@ function editProfile(evt) {
 }
 
 function createCard (link, name) {
-	let newCard = cardTemplate.querySelector(".card").cloneNode(true);
+	const newCard = cardTemplate.querySelector(".card").cloneNode(true);
 
 	const newCardPhoto = newCard.querySelector(".card__photo");
 	newCardPhoto.alt = name;
@@ -110,8 +110,7 @@ function toggleLikes(like) {
 function addCard(evt) {
 	evt.preventDefault();
 
-	let newCard;
-	newCard = createCard(linkInput.value, placeInput.value);
+	const newCard = createCard(linkInput.value, placeInput.value);
 	cardsContainer.prepend(newCard);
 	linkInput.value = '';
 	placeInput.value = '';
